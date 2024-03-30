@@ -42,7 +42,7 @@ classifiers = [
     "Environment :: Plugins",
     "Intended Audience :: End Users/Desktop",
     "Operating System :: OS Independent",
-    "Text Processing :: Markup",
+    "Topic :: Text Processing :: Markup :: Markdown",
     "Topic :: Software Development :: Libraries :: Python Modules",
 ]
 
