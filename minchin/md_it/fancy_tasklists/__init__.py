@@ -48,7 +48,7 @@ _GFM_WHITESPACE_RE = r"[ \t\n\v\f\r]"
 
 # Characters that can be valid "filler"
 # does not include the space
-_VALID_FILLER = r'a-zA-Z0-9/\-><?!*"@\+&~'
+_VALID_FILLER = r'a-zA-Z0-9/\-><?!*"@\+&~🚿'
 
 
 def fancy_tasklists_plugin(
