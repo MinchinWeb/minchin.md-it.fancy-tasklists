@@ -23,6 +23,7 @@ Builds task/todo lists out of markdown lists with items starting with [ ]
 # OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 from __future__ import annotations
 
+from html import escape as html_escape
 import re
 from uuid import uuid4
 
@@ -47,7 +48,7 @@ _GFM_WHITESPACE_RE = r"[ \t\n\v\f\r]"
 
 # Characters that can be valid "filler"
 # does not include the space
-_VALID_FILLER = r'a-zA-Z0-9/\-><?!*"@'
+_VALID_FILLER = r'a-zA-Z0-9/\-><?!*"@\+&~'
 
 
 def fancy_tasklists_plugin(
@@ -132,12 +133,15 @@ def fancy_tasklists_plugin(
         if token.content.startswith("[ ] "):
             checkbox.content = (
                 '<input class="task-list-item-checkbox" '
-                f'{disabled_attr} type="checkbox" data-task=" ">'
+                f'{disabled_attr} type="checkbox" data-task=" " />'
+                '<span data-task=" "></span>'
             )
         elif match := re.match(rf"\[([{_VALID_FILLER}])\] ", token.content):
+            task = html_escape(match.group(1))
             checkbox.content = (
                 '<input class="task-list-item-checkbox" checked="checked" '
-                f'{disabled_attr} type="checkbox" data-task="{match.group(1)}">'
+                f'{disabled_attr} type="checkbox" data-task="{task}" />'
+                f'<span data-task="{task}"></span>'
             )
         return checkbox
 
