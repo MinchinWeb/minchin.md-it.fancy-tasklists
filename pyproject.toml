@@ -42,7 +42,7 @@ classifiers = [
     "Environment :: Plugins",
     "Intended Audience :: End Users/Desktop",
     "Operating System :: OS Independent",
-    "Topic :: Internet :: WWW/HTTP",
+    "Text Processing :: Markup",
     "Topic :: Software Development :: Libraries :: Python Modules",
 ]
 
@@ -51,7 +51,7 @@ classifiers = [
 "Bug Tracker" = "https://github.com/MinchinWeb/minchin.md-it.fancy-tasklists/issues"
 # Documentation = 
 Repository = "https://github.com/MinchinWeb/minchin.md-it.fancy-tasklists"
-# Changelog = 
+Changelog = "https://github.com/MinchinWeb/minchin.md-it.fancy-tasklists/blob/master/CHANGELOG.rst"
 # "Release Notes"
 
 
