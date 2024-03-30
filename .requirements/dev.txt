@@ -4,11 +4,11 @@
 #
 #    pip-compile '.requirements\dev.in'
 #
-black==24.2.0
+black==24.3.0
     # via -r .requirements\dev.in
 bleach==6.1.0
     # via minchin-releaser
-build==1.0.3
+build==1.2.1
     # via
     #   minchin-releaser
     #   pip-tools
@@ -35,7 +35,7 @@ gitpython==3.1.42
     # via minchin-releaser
 idna==3.6
     # via requests
-importlib-metadata==7.0.1
+importlib-metadata==7.1.0
     # via twine
 invoke==2.2.0
     # via minchin-releaser
@@ -45,7 +45,11 @@ isort==5.13.2
     #   minchin-releaser
 jaraco-classes==3.3.1
     # via keyring
-keyring==24.3.0
+jaraco-context==4.3.0
+    # via keyring
+jaraco-functools==4.0.0
+    # via keyring
+keyring==25.0.0
     # via twine
 markdown-it-py==3.0.0
     # via rich
@@ -54,20 +58,22 @@ mdurl==0.1.2
 minchin-releaser==0.9.1
     # via -r .requirements\dev.in
 more-itertools==10.2.0
-    # via jaraco-classes
+    # via
+    #   jaraco-classes
+    #   jaraco-functools
 mypy-extensions==1.0.0
     # via black
-nh3==0.2.15
+nh3==0.2.17
     # via readme-renderer
-packaging==23.2
+packaging==24.0
     # via
     #   black
     #   build
 pathspec==0.12.1
     # via black
-pip-tools==7.4.0
+pip-tools==7.4.1
     # via -r .requirements\dev.in
-pkginfo==1.9.6
+pkginfo==1.10.0
     # via twine
 platformdirs==4.2.0
     # via black
@@ -82,7 +88,7 @@ pyproject-hooks==1.0.0
     #   pip-tools
 pywin32-ctypes==0.2.2
     # via keyring
-readme-renderer==42.0
+readme-renderer==43.0
     # via twine
 requests==2.31.0
     # via
@@ -93,7 +99,7 @@ requests-toolbelt==1.0.0
     # via twine
 rfc3986==2.0.0
     # via twine
-rich==13.7.0
+rich==13.7.1
     # via twine
 semantic-version==2.10.0
     # via minchin-releaser
@@ -110,11 +116,11 @@ urllib3==2.2.1
     #   twine
 webencodings==0.5.1
     # via bleach
-wheel==0.42.0
+wheel==0.43.0
     # via
     #   minchin-releaser
     #   pip-tools
-zipp==3.17.0
+zipp==3.18.1
     # via importlib-metadata
 
 # The following packages are considered to be unsafe in a requirements file:
