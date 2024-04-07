@@ -5,6 +5,7 @@ Builds task/todo lists out of markdown lists with items starting with [ ]
 
 # Extended by William Minchin
 # Ported to Python by Wolmar Nyberg Åkerström from https://github.com/revin/markdown-it-task-lists
+#
 # ISC License
 # Copyright (c) 2016-18 Revin Guillen
 # Copyright (c) Wolmar Nyberg Åkerström
@@ -48,7 +49,7 @@ _GFM_WHITESPACE_RE = r"[ \t\n\v\f\r]"
 
 # Characters that can be valid "filler"
 # does not include the space
-_VALID_FILLER = r'a-zA-Z0-9/\-><?!*"@\+&~🚿'
+_VALID_FILLER = r'a-zA-Z0-9/\-><?!*"@\+&~🚿🦷⛪'
 
 
 def fancy_tasklists_plugin(
